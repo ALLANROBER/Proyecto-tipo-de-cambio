@@ -1,4 +1,5 @@
-# Proyecto: Consumo del API de Tipo de Cambio del Banco de Guatemala
+# INTRUCCIONES DE INSTALACION
+Proyecto: Consumo del API de Tipo de Cambio del Banco de Guatemala
 ste proyecto consiste en una aplicación web que consulta el tipo de cambio del Banco de Guatemala, lo muestra en una interfaz realizada con Next.js y lo guarda en una base de datos mariadb utilizando un backend desarrollado en Spring Boot.
 
 ### Prerrequisitos
@@ -51,6 +52,40 @@ npm install
 npm run dev
 ##
 5. Seguidamente de haber ejecutado los codigos anteriores vamos al navegador e ingresamos la direccion http://localhost:3000 y con esto ya podemos visualizar en el navegador el menu de la app.
+
+#TECNOLOGIAS UTILIZADAS
+BACKEND
+Java 17
+Spring Boot
+Hibernet
+Maven
+
+FRONTED
+Next.js
+CSS
+
+BASE DE DATOS
+MARIADB
+
+OTROS 
+API oficial del Banco de Guatemala (Servicio SOAP)
+
+
+
+##ESQUEMA DE BASE DE DATOS
+
+Omitir lo siguiente es el esquema de la base de datos, la cual se creara automaticamente si todo se hizo bien en los pasos anteriores, lo adjunto por que la documentacion lo requiere
+
+CREATE DATABASE IF NOT EXISTS monedadb;
+USE monedadb;
+CREATE TABLE `tipo_cambio` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `fecha_consulta` datetime(6) DEFAULT NULL,
+  `fecha_tipo_cambio` date DEFAULT NULL,
+  `origen_api` varchar(255) DEFAULT NULL,
+  `tipo_cambio` decimal(38,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 
 
