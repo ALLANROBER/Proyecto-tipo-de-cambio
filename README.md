@@ -7,3 +7,7 @@ ste proyecto consiste en una aplicación web que consulta el tipo de cambio del 
 - Node.js y npm
 - MariaDB instalado (administrado con DBeaver)
 - Editor o IDE (IntelliJ, VSCode, etc.)
+
+## Configurar la base de datos
+1. Abre el archivo application.properties el cual esta ubicado en "Backend\src\main\resources\application.properties"
+2. 
