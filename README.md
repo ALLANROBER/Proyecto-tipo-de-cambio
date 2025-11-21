@@ -42,3 +42,16 @@ spring.jpa.show-sql=true
 
 management.endpoints.web.exposure.include=*
 
+##
+3.Luego de guardar los cambios Ejecutamos el backend mediante la clase BackendApplication.java, Esto lo encuentras en la siguiente ruta "Backend\src\main\java\com\backend\Backend\BackendApplication.java"
+##
+4. luego de ejecutar la clase nos vamos a la carpeta de Frontend, abrimos la terminal dentro de la direccion de la carpeta y ejecutamos los siguientes codigos uno por uno, ojo no ejecutar todos a la misma vez.
+npm install
+npm run dev
+
+5. Seguidamente de aver ejecutado los codigos anteriores vamos al navegador e ingresamos la direccion http://localhost:3000
+
+
+
+
+
