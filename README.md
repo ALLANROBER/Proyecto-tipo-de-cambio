@@ -10,4 +10,35 @@ ste proyecto consiste en una aplicación web que consulta el tipo de cambio del 
 
 ## Configurar la base de datos
 1. Abre el archivo application.properties el cual esta ubicado en "Backend\src\main\resources\application.properties"
-2. 
+Encontraras el siguiente codigo:
+##
+spring.application.name=Backend
+
+server.port=8080
+
+spring.datasource.url=jdbc:mysql://localhost:3306/monedadb
+spring.datasource.username=root
+spring.datasource.password=12345
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+management.endpoints.web.exposure.include=*
+
+Ingresa los datos de tu base de datos que usaras en username y password
+
+spring.application.name=Backend
+
+server.port=8080
+
+spring.datasource.url=jdbc:mysql://localhost:3306/monedadb
+spring.datasource.username=tuusuario
+spring.datasource.password=tucontraseña
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+management.endpoints.web.exposure.include=*
+
