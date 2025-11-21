@@ -71,8 +71,8 @@ OTROS
 API oficial del Banco de Guatemala (Servicio SOAP)
 
 ##CAPTURAS DE PANTALLA
-![MENU INICIO](./CAPTURAS/1.menu inicio.png)
-![CONSULTA](./CAPTURAS/Consulta realizada.png)
+![MENU INICIO](./CAPTURAS/1.menu_inicio.png)
+![CONSULTA](./CAPTURAS/Consulta_realizada.png)
 ![HISTORIAL](./CAPTURAS/Historial.png)
 
 
