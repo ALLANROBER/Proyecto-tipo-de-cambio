@@ -26,7 +26,7 @@ spring.jpa.show-sql=true
 
 management.endpoints.web.exposure.include=*
 
-##Ingresa los datos de tu base de datos que usaras en username y password abajo de dejo nuevamente el codigo de referencia de como quedaria
+2.Ingresa los datos de tu base de datos que usaras en username y password abajo de dejo nuevamente el codigo de referencia de como quedaria
 
 spring.application.name=Backend
 
