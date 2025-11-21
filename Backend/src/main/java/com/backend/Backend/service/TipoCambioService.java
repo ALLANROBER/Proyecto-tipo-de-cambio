@@ -26,10 +26,10 @@ import java.util.List;
 public class TipoCambioService {
 
     private final TipoCambioRepository repository;
-
+//1
     private static final String SOAP_ENDPOINT = "https://www.banguat.gob.gt/variables/ws/TipoCambio.asmx";
     private static final String SOAP_ACTION = "http://www.banguat.gob.gt/variables/ws/TipoCambioDia";
-
+//2
     private static final String REQUEST_XML =
             """
             <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
@@ -44,7 +44,7 @@ public class TipoCambioService {
         this.repository = repository;
     }
 
-
+//3
     public MessageDto consultarTipoCambio() {
         try {
             HttpURLConnection connection = (HttpURLConnection) new URL(SOAP_ENDPOINT).openConnection();
@@ -53,11 +53,11 @@ public class TipoCambioService {
             connection.setRequestProperty("Accept", "text/xml");
             connection.setRequestProperty("SOAPAction", SOAP_ACTION);
             connection.setDoOutput(true);
-
+//4
             try (OutputStream os = connection.getOutputStream()) {
                 os.write(REQUEST_XML.getBytes(StandardCharsets.UTF_8));
             }
-
+//5
             int status = connection.getResponseCode();
             InputStream responseStream = status == 200 ? connection.getInputStream() : connection.getErrorStream();
             String xml = new String(responseStream.readAllBytes(), StandardCharsets.UTF_8);
@@ -70,7 +70,7 @@ public class TipoCambioService {
             dbf.setNamespaceAware(true);
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document doc = db.parse(new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8)));
-
+//6
             XPath xPath = XPathFactory.newInstance().newXPath();
             String fechaStr = xPath.evaluate("//*[local-name()='fecha']/text()", doc).trim();
             String referenciaStr = xPath.evaluate("//*[local-name()='referencia']/text()", doc).trim();
@@ -78,10 +78,10 @@ public class TipoCambioService {
             if (fechaStr.isEmpty() || referenciaStr.isEmpty()) {
                 return new MessageDto(false, "No se encontró <fecha> o <referencia> en el XML.");
             }
-
+//7
             LocalDate fechaCambio = LocalDate.parse(fechaStr, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
             BigDecimal tipoCambio = new BigDecimal(referenciaStr);
-
+//8
             TipoCambio tc = new TipoCambio();
             tc.setFechaConsulta(LocalDateTime.now());
             tc.setFechaTipoCambio(fechaCambio);
@@ -89,7 +89,7 @@ public class TipoCambioService {
             tc.setOrigenApi("TipoCambioDia");
 
             TipoCambio guardado = repository.save(tc);
-
+//9
             return new MessageDto(true, "Consulta exitosa", guardado);
 
         } catch (Exception e) {
