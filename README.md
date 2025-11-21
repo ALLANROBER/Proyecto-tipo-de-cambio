@@ -49,7 +49,7 @@ management.endpoints.web.exposure.include=*
 npm install
 npm run dev
 
-5. Seguidamente de aver ejecutado los codigos anteriores vamos al navegador e ingresamos la direccion http://localhost:3000
+5. Seguidamente de haber ejecutado los codigos anteriores vamos al navegador e ingresamos la direccion http://localhost:3000 y con esto ya podemos visualizar en el navegador el menu de la app.
 
 
 
