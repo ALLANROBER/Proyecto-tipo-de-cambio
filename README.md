@@ -70,6 +70,10 @@ MARIADB
 OTROS 
 API oficial del Banco de Guatemala (Servicio SOAP)
 
+##CAPTURAS DE PANTALLA
+![MENU INICIO](./CAPTURAS/1.menu inicio.png)
+![CONSULTA](./CAPTURAS/Consulta realizada.png)
+![HISTORIAL](./CAPTURAS/Historial.png)
 
 
 ##ESQUEMA DE BASE DE DATOS
