@@ -11,6 +11,7 @@ ste proyecto consiste en una aplicación web que consulta el tipo de cambio del 
 ## Configurar la base de datos
 1. Abre el archivo application.properties el cual esta ubicado en "Backend\src\main\resources\application.properties"
 Encontraras el siguiente codigo:
+##
 spring.application.name=Backend
 
 server.port=8080
@@ -25,8 +26,8 @@ spring.jpa.show-sql=true
 
 management.endpoints.web.exposure.include=*
 
-2.Ingresa los datos de tu base de datos que usaras en username y password abajo de dejo nuevamente el codigo de referencia de como quedaria
-
+##2.Ingresa los datos de tu base de datos que usaras en username y password abajo de dejo nuevamente el codigo de referencia de como quedaria
+##
 spring.application.name=Backend
 
 server.port=8080
